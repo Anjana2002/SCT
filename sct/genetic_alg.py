@@ -21,7 +21,7 @@ for generation in range(50):
                   k = 2)
         crossover_point = random.randint(0, chromosome_length-1)
         child1 = parents[0][:crossover_point] + parents[1][crossover_point:]
-        child2 = parents[1][:crossover_point] + parents[1][crossover_point:]
+        child2 = parents[1][:crossover_point] + parents[0][crossover_point:]
 
         #mutation
         child1 = ''.join(bit if random.random() > mutation_rate else str (1 - int(bit)) for bit in child1)
